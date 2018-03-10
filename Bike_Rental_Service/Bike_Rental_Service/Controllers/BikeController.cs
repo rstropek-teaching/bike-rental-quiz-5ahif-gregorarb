@@ -115,6 +115,10 @@ namespace Bike_Rental_Service.Controllers
                 {
                     return StatusCode(404, "The bike with the given ID was not found.");
                 }
+                // It is not possible to remove a bike if one ore more rentals exist for it
+                if (db.Rentals.Any(r => r.RentedBike.Id == id && r.RentalEnd == null)){
+                    return StatusCode(400, "Cannot delete a bike that is currently on a rental.");
+                }
                 db.Bikes.Remove(bike);
 
                 db.SaveChanges();

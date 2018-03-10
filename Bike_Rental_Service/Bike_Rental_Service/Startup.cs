@@ -24,7 +24,7 @@ namespace Bike_Rental_Service
 
             // To connect to the database
             // var connection = @"Server=(localdb)\mssqllocaldb;Database=BikeRentalDB;Trusted_Connection=True;ConnectRetryCount=0";
-            var connection = "Server=tcp:bikerentalserver.database.windows.net,1433;Initial Catalog=bikerentaldb;Persist Security Info=False;User ID=dbadmin;Password=FLjl21lfiIlj31;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
+            var connection = "Server=tcp:bikerentalserver.database.windows.net,1433;Initial Catalog=bikerentaldb;Persist Security Info=False;User ID=admin;Password=ABC123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
             services.AddDbContext<BikeRentalContext>(options => options.UseSqlServer(connection));
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>

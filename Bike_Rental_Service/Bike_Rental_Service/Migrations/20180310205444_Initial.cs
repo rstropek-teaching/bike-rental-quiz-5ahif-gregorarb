@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Bike_Rental_Service.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -37,11 +37,11 @@ namespace Bike_Rental_Service.Migrations
                     Birthdate = table.Column<DateTime>(nullable: false),
                     FirstName = table.Column<string>(maxLength: 50, nullable: false),
                     Gender = table.Column<int>(nullable: false),
-                    HouseNumber = table.Column<int>(nullable: false),
+                    HouseNumber = table.Column<string>(maxLength: 10, nullable: true),
                     LastName = table.Column<string>(maxLength: 75, nullable: false),
-                    Street = table.Column<string>(maxLength: 50, nullable: false),
-                    Town = table.Column<string>(maxLength: 50, nullable: false),
-                    ZipCode = table.Column<int>(nullable: false)
+                    Street = table.Column<string>(maxLength: 75, nullable: false),
+                    Town = table.Column<string>(maxLength: 75, nullable: false),
+                    ZipCode = table.Column<string>(maxLength: 10, nullable: false)
                 },
                 constraints: table =>
                 {

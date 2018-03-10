@@ -12,8 +12,8 @@ using System;
 namespace Bike_Rental_Service.Migrations
 {
     [DbContext(typeof(BikeRentalContext))]
-    [Migration("20180302195408_initial")]
-    partial class initial
+    [Migration("20180310211534_AzureInitial")]
+    partial class AzureInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,7 +63,8 @@ namespace Bike_Rental_Service.Migrations
 
                     b.Property<int>("Gender");
 
-                    b.Property<int>("HouseNumber");
+                    b.Property<string>("HouseNumber")
+                        .HasMaxLength(10);
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -71,13 +72,15 @@ namespace Bike_Rental_Service.Migrations
 
                     b.Property<string>("Street")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasMaxLength(75);
 
                     b.Property<string>("Town")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasMaxLength(75);
 
-                    b.Property<int>("ZipCode");
+                    b.Property<string>("ZipCode")
+                        .IsRequired()
+                        .HasMaxLength(10);
 
                     b.HasKey("Id");
 

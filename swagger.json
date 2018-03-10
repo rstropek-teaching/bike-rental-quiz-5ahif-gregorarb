@@ -498,23 +498,19 @@
                "type":"string"
             },
             "street":{  
-               "maxLength":50,
+               "maxLength":75,
                "type":"string"
             },
             "houseNumber":{  
-               "format":"int32",
-               "maximum":2147483647,
-               "minimum":0,
-               "type":"integer"
+               "maxLength":10,
+               "type":"string"
             },
             "zipCode":{  
-               "format":"int32",
-               "maximum":2147483647,
-               "minimum":0,
-               "type":"integer"
+               "maxLength":10,
+               "type":"string"
             },
             "town":{  
-               "maxLength":50,
+               "maxLength":75,
                "type":"string"
             }
          }

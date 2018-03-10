@@ -62,7 +62,8 @@ namespace Bike_Rental_Service.Migrations
 
                     b.Property<int>("Gender");
 
-                    b.Property<int>("HouseNumber");
+                    b.Property<string>("HouseNumber")
+                        .HasMaxLength(10);
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -70,13 +71,15 @@ namespace Bike_Rental_Service.Migrations
 
                     b.Property<string>("Street")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasMaxLength(75);
 
                     b.Property<string>("Town")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasMaxLength(75);
 
-                    b.Property<int>("ZipCode");
+                    b.Property<string>("ZipCode")
+                        .IsRequired()
+                        .HasMaxLength(10);
 
                     b.HasKey("Id");
 

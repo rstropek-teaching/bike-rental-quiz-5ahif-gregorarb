@@ -22,18 +22,18 @@ namespace Bike_Rental_Service.Models
         public DateTime Birthdate { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(75)]
         public string Street { get; set; }
 
-        [Range(0,int.MaxValue)]
-        public int HouseNumber { get; set; }
+        [MaxLength(10)]
+        public string HouseNumber { get; set; }
 
         [Required]
-        [Range(0, int.MaxValue)]
-        public int ZipCode { get; set; }
+        [MaxLength(10)]
+        public string ZipCode { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(75)]
         public string Town { get; set; }
     }
 }

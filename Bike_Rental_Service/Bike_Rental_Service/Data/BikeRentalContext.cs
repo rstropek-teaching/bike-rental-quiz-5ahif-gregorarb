@@ -11,8 +11,8 @@ namespace Bike_Rental_Service.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer("Server = (localdb)\\MSSQLLocalDB; Database = BikeRentalDB; Trusted_Connection = True");
-            optionsBuilder.UseSqlServer("Server=tcp:bikerentalserver.database.windows.net,1433;Initial Catalog=bikerentaldb;Persist Security Info=False;User ID=dbadmin;Password=FLjl21lfiIlj31;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+            //optionsBuilder.UseSqlServer("Server = (localdb)\\MSSQLLocalDB; Database = BikeRentalDatabase; Trusted_Connection = True");
+            optionsBuilder.UseSqlServer("Server=tcp:bikerentalserver.database.windows.net,1433;Initial Catalog=bikerentaldb;Persist Security Info=False;User ID=admin;Password=ABC123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
         }
         public BikeRentalContext()
         {
